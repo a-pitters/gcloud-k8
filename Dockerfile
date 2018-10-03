@@ -1,6 +1,6 @@
 FROM docker:latest
 
-ENV CLOUD_SDK_VERSION 209.0.0
+ENV CLOUD_SDK_VERSION 219.0.1
 ENV PATH /google-cloud-sdk/bin:$PATH
 RUN apk --no-cache add \
         curl \
