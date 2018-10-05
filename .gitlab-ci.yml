@@ -9,13 +9,13 @@ services:
 before_script:
 #  - echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
  - docker login registry.gitlab.com
-build-image-dev:
+build-image-master:
   stage: build
   script:
     - docker build -t registry.gitlab.com/a-pitters/gcloud-k8  .
     - docker push registry.gitlab.com/a-pitters/gcloud-k8
   only:
-    - tags
+  - master
 
 build-image-tags:
   stage: build
